@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Orelega+One&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        body{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            border: 1px linear-gradient(to left, #0000ff 0%, #9900ff 100%) solid;
+            height: 30px;
+            width: 100%;
+            top: 0px;
+            background: linear-gradient(to left, #0000ff 0%, #9900ff 100%);
+        }
+        .btn{
+            border: solid 1px #0000ff;
+            border-radius: 5px;
+            padding: 2px 4px 2px 4px;
+            margin-top: 10px;
+            width: 80px;
+            margin-left: 1265px;
+        }
+        .btn a{
+            color: #0000ff;
+            font-size: 30px;
+            text-decoration: none;
+        }
+       
+        .data img{
+            margin-top: 70px;
+            text-align: center;
+            width: 360px;
+        }
+        .data h3{
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-family: 'Orelega One', cursive;
+            font-family: 'Roboto Mono', monospace;
+        }
+        #preloader{
+  background: #fff url(images/load.gif) no-repeat center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: 1.5s;
+}
+    </style>
+</head>
+<html>
+<body>
+
+    <div class="first">
+        <div class="header"></div></div>
+         <div class="btn">
+             <a href="something.html">Back</a>
+         </div>
+         <div class="data">
+             <img src="images/empty.png" alt="">
+             <h3>No Updates Are Avilable</h3>
+         </div>
+         
+</div>
+<script>
+
+    var loader =document.getElementById("preloader");
+  
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+    })
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Mega pass</title>
+  <style>
+    body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff4c4c;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Rubik', sans-serif;
+  transition: 0.6s;
+}
+
+.topnav a:hover {
+  background-color: #f28b88;
+  color: #fff;
+}
+
+.topnav a.active {
+  background-color: #8e1600;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+.logo{
+  width: 240px;
+  float: right;
+}
+#preloader{
+  background: #fff url(images/load.gif) no-repeat center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: 1.5s;
+}
+.megapass{
+  border: solid 1px #bf40bf;
+  border-radius: 10px;
+  box-shadow: gray 2px 5px 9px 0;
+  width: 98%;
+  height: 300px;
+  margin-left: 8px;
+  margin-right: 6px;
+  margin-top: 70px;
+   background: linear-gradient(to bottom right,#bf40bf,#ff00ff);
+  padding-top: 0px;
+}
+.megapass .heading2{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+.megapass .task2{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  margin-top: 60px;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.megapass .task2 a{
+  border: solid 1px white;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 3px;
+  color: #bf40bf;
+  background-color: #fff;
+  font-family: 'Rubik', sans-serif;
+  transition: 0.5s;
+}
+.megapass .task2 a:hover{
+  border-color: #bf40bf;
+  color: #fff;
+   background: linear-gradient(to bottom right,#bf40bf,#ff00ff);
+}
+.megapass .add2{
+  color: #b2beb5;
+  margin-left: 30%;
+  margin-bottom: 70px;
+}
+.megapass .info2 a{
+  text-decoration: none;
+  color: #8e1600;
+  margin-top: 150px;
+  margin-left: 92%;
+  transition: 0.7s;
+}
+.megapass .info2 a:hover{
+  color: #fff;
+}
+ .s2{
+  display: none;
+ }
+ .info2{
+  display: none;
+ }
+@media screen and (max-height: 400px) {
+  .topnav ,.data ,.freepass ,.megapass ,.commonpass{
+    display: none;
+  }
+  .alertto{
+    display: inline-block;
+    border: 0px solid #fff;
+    border-radius: 100%;
+    background-color: skyblue;
+    height: 360px;
+    width: 640px;
+  }
+  .errorpic{
+    height: 150px;
+    margin-left: 40%;
+  }
+  .alert{
+    margin-right: 70px;
+    text-align: right;
+    font-size: 30px;
+  }
+  .alert2{
+    margin-left: 150px;
+    font-size: 30;
+    color: #ff2424;
+  }
+  .alert1{
+    margin-left: 130px;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .logo{
+    width: 100%;
+  }
+  .megapass .heading2{
+    font-size: 25px;
+  }
+  .s2{ 
+  border: solid 1px white;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 3px;
+  color: #bf40bf;
+  background-color: #fff;
+  font-family: 'Rubik', sans-serif;
+  transition: 0.5s;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 125px;
+}
+.megapass{
+    width: 96%;
+    height: 170px;
+    margin-top: 35px;
+  }
+  .megapass .add2{
+    display: none;
+  }
+  .megapass .info2{
+    font-size: 7px;
+   display: none;
+  }
+  .megapass .task2 a{
+    display: none;
+  }
+  .megapass .task2{
+    font-size: 13px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-bottom: 0;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div id="preloader"></div>
+
+<div class="topnav" id="myTopnav">
+  <a href="#" class="active"><i class="fa fa-ticket"></i> Mega Pass</a>
+  <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+  <a href="fpass.html"><i class="fa fa-ticket"></i> Free Pass</a>
+  <a href="cpass.html"><i class="fa fa-ticket"></i> Common Pass</a>
+  <a href="report.html"><i class="fa fa-envelope"></i> Report</a>
+  <a href="about.html"><i class="fa fa-address-card"></i> About</a>
+  <a href="something.html"><i class="fa fa-gift"></i> Update & Offers</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <img class="logo" src="images/20211015_100122.png">
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+
+  var loader =document.getElementById("preloader");
+
+  window.addEventListener("load", function(){
+    loader.style.display = "none";
+  })
+
+</script>
+<div class="megapass">
+  <h2 class="heading2">MEGA PASS</h2>
+  <p class="task2">
+    Buy MEGA PASS to get mega subscribers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Buy Now</a>
+  </p>
+  <a class="s2" href="#">Buy Now</a>
+  <p class="add2">
+ 
+  </p>
+  
+</div>
+</body>
+</html>
